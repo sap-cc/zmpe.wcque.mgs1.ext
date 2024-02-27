@@ -1,0 +1,79 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:View controllerName="i2d.mpe.wcqueue.manages1.controller.Object" xmlns:core="sap.ui.core" xmlns="sap.uxap"
+	xmlns:layout="sap.ui.layout" xmlns:m="sap.m" xmlns:customBlock="i2d.mpe.wcqueue.manages1.blocks"
+	xmlns:smartVariants="sap.ui.comp.smartvariants" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:commonsBlock="sap.i2d.mpe.lib.commons1.blocks" height="100%">
+	<!--	<smartVariants:SmartVariantManagement id="idSmartVManagement" persistencyKey="SmartVariantKey" showCreateTile="true"
+			showExecuteOnSelection="true" showShare="true" manage="handleManageVariant" save="handleSaveVariant"></smartVariants:SmartVariantManagement>-->
+	<ObjectPageLayout upperCaseAnchorBar="false" id="ObjectPageLayout" enableLazyLoading="true" useIconTabBar="true">
+		<headerTitle>
+			<ObjectPageHeader id="idOpreationObjectPageHeader" objectTitle="{DetailModel>/WorkCenter}" objectSubtitle="{DetailModel>/WorkCenterText}"
+				headerDesign="Light" showTitleSelector="true" titleSelectorPress="handleTitleSelectorPress">
+			</ObjectPageHeader>
+		</headerTitle>
+		<headerContent>
+			<!--<smartVariants:SmartVariantManagement id="idSmartVManagement" persistencyKey="SmartVariantKey" showCreateTile="true"
+				showExecuteOnSelection="true" showShare="true" manage="handleManageVariant" save="handleSaveVariant"></smartVariants:SmartVariantManagement>-->
+
+
+			<m:ObjectAttribute id="WorkCenterLocation" title="{i18n>location}" visible="{= ${DetailModel>/WorkCenterLocation} !== ''}"
+				text="{DetailModel>/WorkCenterLocation}" tooltip="{DetailModel>/WorkCenterLocation}"/>
+			<m:ObjectAttribute title="{i18n>supplyArea}" visible="{= ${DetailModel>/SupplyArea} !== ''}" text="{DetailModel>/SupplyArea}"
+				tooltip="{DetailModel>/SupplyArea}"/>
+			<m:ObjectAttribute id="WorkCenterResponsible" title="{i18n>responsible}" visible="{= ${DetailModel>/WorkCenterResponsible} !== ''}"
+				text="{parts:[{path:'DetailModel>/WorkCenterResponsible'}, {path:'DetailModel>/WorkCenterResponsibleName'}], formatter:'.formatter.formatTextWithBrackets'}"
+				tooltip="{parts:[{path:'DetailModel>/WorkCenterResponsible'}, {path:'DetailModel>/WorkCenterResponsibleName'}], formatter:'.formatter.formatTextWithBrackets'}"/>
+			<m:ObjectAttribute title="{i18n>plant}" visible="{= ${DetailModel>/ProductionPlant} !== ''}"
+				text="{parts:[{path:'DetailModel>/ProductionPlant'}, {path:'DetailModel>/PlantName'}], formatter:'.formatter.formatTextWithBrackets'}"
+				tooltip="{parts:[{path:'DetailModel>/ProductionPlant'}, {path:'DetailModel>/PlantName'}], formatter:'.formatter.formatTextWithBrackets'}"/>
+
+
+			<!--smart filter bar-->
+ 	<!-- 		<smartFilterBar:SmartFilterBar useToolbar="true" enableBasicSearch="true" id="smartFilterBar"
+					entitySet="{= ${DetailModel>/WorkCenter} &amp;&amp; ${DetailModel>/WorkCenter} !== '' ? 'C_MfgProcgExecOperation' : 'C_Manageoperations'}"
+				persistencyKey="SmartFilterPKey" initialized="loadInitialVariant" search="handleGOBtnPress">
+				<smartFilterBar:customData>
+					<core:CustomData key="dateFormatSettings" value='\{"UTC":true\}'/>
+				</smartFilterBar:customData>
+				<smartFilterBar:controlConfiguration>
+					<smartFilterBar:ControlConfiguration groupId="C_MfgProcgExecOperationType" index="1" key="MaterialName" label="{i18n>Material}"
+						visibleInAdvancedArea="true"></smartFilterBar:ControlConfiguration>
+				</smartFilterBar:controlConfiguration>
+			</smartFilterBar:SmartFilterBar> -->
+			<!--smart filter bar ends-->
+		</headerContent>
+		<sections upperCaseAnchorBar="true" id="objectPageSection">
+			<ObjectPageSection title="{i18n>operationsInProgress}">
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks>
+							<customBlock:OperationInProgressBlock id="idOperationInPrgrss2"/>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection title="{i18n>operationsNotStarted}">
+				<subSections>
+					<ObjectPageSubSection visible="false">
+						<blocks>
+							<customBlock:OperationNotStartedBlock columnLayout="4" id="idOperationNotStrtd2"/>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection title="{i18n>operationsFinished}">
+				<subSections>
+					<ObjectPageSubSection visible="false">
+						<blocks>
+							<customBlock:OperationFinishedBlock columnLayout="4" id="idOperationFnshd2"/>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+	</ObjectPageLayout>
+</core:View>

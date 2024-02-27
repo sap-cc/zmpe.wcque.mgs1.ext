@@ -1,0 +1,47 @@
+{
+  "type": "abaprep",
+  "BSPName": "MPE_WCQUE_MNGS1",
+  "component": "MPE_WCQUE_MNGS1%2fComponent.js",
+  "manifest": "MPE_WCQUE_MNGS1%2fmanifest.json",
+  "versionJsonPath": "MPE_WCQUE_MNGS1%2fversion.json",
+  "controllers": {
+    "OperationFinishedController": "MPE_WCQUE_MNGS1%2fblocks%2fOperationFinishedController.controller.js",
+    "OperationInProgressController": "MPE_WCQUE_MNGS1%2fblocks%2fOperationInProgressController.controller.js",
+    "OperationNotStartedController": "MPE_WCQUE_MNGS1%2fblocks%2fOperationNotStartedController.controller.js",
+    "App": "MPE_WCQUE_MNGS1%2fcontroller%2fApp.controller.js",
+    "Object": "MPE_WCQUE_MNGS1%2fcontroller%2fObject.controller.js",
+    "PerformWork": "MPE_WCQUE_MNGS1%2fcontroller%2fPerformWork.controller.js"
+  },
+  "views": {
+    "OperationFinishedBlock": "MPE_WCQUE_MNGS1%2fblocks%2fOperationFinishedBlock.view.xml",
+    "OperationInProgressBlock": "MPE_WCQUE_MNGS1%2fblocks%2fOperationInProgressBlock.view.xml",
+    "OperationNotStartedBlock": "MPE_WCQUE_MNGS1%2fblocks%2fOperationNotStartedBlock.view.xml",
+    "App": "MPE_WCQUE_MNGS1%2fview%2fApp.view.xml",
+    "NotFound": "MPE_WCQUE_MNGS1%2fview%2fNotFound.view.xml",
+    "Object": "MPE_WCQUE_MNGS1%2fview%2fObject.view.xml",
+    "ObjectNotFound": "MPE_WCQUE_MNGS1%2fview%2fObjectNotFound.view.xml",
+    "PerformWork": "MPE_WCQUE_MNGS1%2fview%2fPerformWork.view.xml",
+    "Worklist": "MPE_WCQUE_MNGS1%2fview%2fWorklist.view.xml"
+  },
+  "fragments": {
+    "MaterialHelpDialog": "MPE_WCQUE_MNGS1%2ffragments%2fMaterialHelpDialog.fragment.xml",
+    "OperationHelpDialog": "MPE_WCQUE_MNGS1%2ffragments%2fOperationHelpDialog.fragment.xml",
+    "OrderHelpDialog": "MPE_WCQUE_MNGS1%2ffragments%2fOrderHelpDialog.fragment.xml",
+    "Popover": "MPE_WCQUE_MNGS1%2ffragments%2fPopover.fragment.xml",
+    "SerialHelpDialog": "MPE_WCQUE_MNGS1%2ffragments%2fSerialHelpDialog.fragment.xml"
+  },
+  "system": {
+    "name": "sap-s4x-100-http",
+    "proxyUrlPrefix": "/destinations/sap-s4x-100-http",
+    "path": "/sap/bc/adt",
+    "url": "/destinations/sap-s4x-100-http/sap/bc/adt",
+    "wattUsage": "odata_abap,ui5_execute_abap,dev_abap,bsp_execute_abap",
+    "entryPath": "/sap/bc/adt",
+    "additionalData": []
+  },
+  "minUI5Version": "1.90.2",
+  "namespace": "i2d.mpe.wcqueue.manages1",
+  "parentResourceRootUrl": "/destinations/sap-s4x-100-http/sap/bc/ui5_ui5/sap/MPE_WCQUE_MNGS1",
+  "resourceBundle": "i18n/i18n.properties",
+  "shouldLinkComponentToManifest": true
+}
