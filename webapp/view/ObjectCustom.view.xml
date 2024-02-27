@@ -47,7 +47,8 @@
 			<!--smart filter bar ends-->
 		</headerContent>
 		<sections upperCaseAnchorBar="true" id="objectPageSection">
-			<ObjectPageSection title="{i18n>operationsInProgress}">
+			<!-- <ObjectPageSection title="{i18n>operationsInProgress}"> -->
+			<ObjectPageSection>
 				<subSections>
 					<ObjectPageSubSection>
 						<blocks>

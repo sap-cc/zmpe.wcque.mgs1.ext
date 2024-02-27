@@ -1,65 +1,73 @@
 {
-    "_version": "1.1.0",
-    "sap.app": {
-        "_version": "1.1.0",
-        "id": "customer.zmpe.wcque.mgs1.ext",
-        "type": "application",
-        "applicationVersion": {
-            "version": "1.0.0"
-        },
-        "title": "{{appTitle}}",
-        "sourceTemplate": {
-            "id": "generator-extensibilty-sub",
-            "version": "1.0.0"
-        },
-        "i18n": "i18n/i18n.properties",
-        "dataSources": {}
-    },
-    "sap.ui": {
-        "_version": "1.1.0",
-        "technology": "UI5",
-        "icons": {
-            "icon": "sap-icon://task",
-            "favIcon": ""
-        },
-        "deviceTypes": {
-            "desktop": true,
-            "tablet": true,
-            "phone": false
-        },
-        "supportedThemes": [
-            "sap_hcb",
-            "sap_bluecrystal"
-        ]
-    },
-    "sap.ui5": {
-        "_version": "1.1.0",
-        "dependencies": {
-            "minUI5Version": "1.90.2"
-        },
-        "extends": {
-            "component": "i2d.mpe.wcqueue.manages1",
-            "extensions": {
-                "sap.ui.viewReplacements": {
-                    "i2d.mpe.wcqueue.manages1.view.Object": {
-                        "viewName": "customer.zmpe.wcque.mgs1.ext.view.ObjectCustom",
-                        "type": "XML"
-                    },
-                    "i2d.mpe.wcqueue.manages1.blocks.OperationInProgressBlock": {
-                        "viewName": "customer.zmpe.wcque.mgs1.ext.blocks.OperationInProgressBlockCustom",
-                        "type": "XML"
-                    }
-                },
-                "sap.ui.controllerExtensions": {
-                    "i2d.mpe.wcqueue.manages1.blocks.OperationInProgressController": {
-                        "controllerName": "customer.zmpe.wcque.mgs1.ext.blocks.OperationInProgressControllerCustom"
-                    }
-                }
-            }
-        },
-        "contentDensities": {
-            "compact": true,
-            "cozy": true
-        }
-    }
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "customer.zmpe.wcque.mgs1.ext",
+		"type": "application",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"sourceTemplate": {
+			"id": "generator-extensibilty-sub",
+			"version": "1.0.0"
+		},
+		"i18n": "i18n/i18n.properties",
+		"dataSources": {}
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "sap-icon://task",
+			"favIcon": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": false
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"dependencies": {
+			"minUI5Version": "1.90.2"
+		},
+		"extends": {
+			"component": "i2d.mpe.wcqueue.manages1",
+			"extensions": {
+				"sap.ui.viewReplacements": {
+					"i2d.mpe.wcqueue.manages1.view.Object": {
+						"viewName": "customer.zmpe.wcque.mgs1.ext.view.ObjectCustom",
+						"type": "XML"
+					},
+					"i2d.mpe.wcqueue.manages1.blocks.OperationInProgressBlock": {
+						"viewName": "customer.zmpe.wcque.mgs1.ext.blocks.OperationInProgressBlockCustom",
+						"type": "XML"
+					}
+				},
+				"sap.ui.controllerExtensions": {
+					"i2d.mpe.wcqueue.manages1.blocks.OperationInProgressController": {
+						"controllerName": "customer.zmpe.wcque.mgs1.ext.blocks.OperationInProgressControllerCustom"
+					}
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "customer.zmpe.wcque.mgs1.ext.i18n.i18n"
+				}
+			}
+		}
+	}
 }
