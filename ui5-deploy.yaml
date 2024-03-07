@@ -18,7 +18,7 @@ builder:
           url: http://sap-s4x:443
         app:
           name: /SRAIL/WCQUEEXT
-          description: deploy from bas madieg
+          description: Manage Work Center Queue CC
           package: /SRAIL/PEO_WQMNG
           transport: S4XK901418
         exclude:
