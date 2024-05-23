@@ -28,39 +28,39 @@ sap.ui.define(
         reuseUtil: r,
         onInit: function () {
 
-			b.navToActivityDetail = function (t, e, s, o) {
-				var r;
-				if (!t) {
-				  r =
-					"ZProductionOrderOperationActyN-process&" +
-					"/OpActyNtwkInstance/" +
-					e +
-					"/OpActyNtwkElement/" +
-					s +
-					"/OpActyIsSeldForRtactvPostg/" +
-					o;
-				} else {
-				  r =
-					"ZProductionOrderOperationActyN-process&/ShopFloorItem/" +
-					t +
-					"/OpActyNtwkInstance/" +
-					e +
-					"/OpActyNtwkElement/" +
-					s +
-					"/OpActyIsSeldForRtactvPostg/" +
-					o;
-				}
-				if (e && s) {
-				  var a =
-					sap.ushell &&
-					sap.ushell.Container &&
-					sap.ushell.Container.getService;
-				  var i = a && a("CrossApplicationNavigation");
-				  if (i) {
-					i.toExternal({ target: { shellHash: r } });
-				  }
-				}
-			  };
+          b.navToActivityDetail = function (t, e, s, o) {
+            var r;
+            if (!t) {
+              r =
+              "ZProductionOrderOperationActyN-process&" +
+              "/OpActyNtwkInstance/" +
+              e +
+              "/OpActyNtwkElement/" +
+              s +
+              "/OpActyIsSeldForRtactvPostg/" +
+              o;
+            } else {
+              r =
+              "ZProductionOrderOperationActyN-process&/ShopFloorItem/" +
+              t +
+              "/OpActyNtwkInstance/" +
+              e +
+              "/OpActyNtwkElement/" +
+              s +
+              "/OpActyIsSeldForRtactvPostg/" +
+              o;
+            }
+            if (e && s) {
+              var a =
+              sap.ushell &&
+              sap.ushell.Container &&
+              sap.ushell.Container.getService;
+              var i = a && a("CrossApplicationNavigation");
+              if (i) {
+              i.toExternal({ target: { shellHash: r } });
+              }
+            }
+            };
 
 
           var i = this.loadI18NFile();

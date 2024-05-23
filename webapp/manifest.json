@@ -53,6 +53,9 @@
 				"sap.ui.controllerExtensions": {
 					"i2d.mpe.wcqueue.manages1.blocks.OperationInProgressController": {
 						"controllerName": "customer.zmpe.wcque.mgs1.ext.blocks.OperationInProgressControllerCustom"
+					},
+					"i2d.mpe.wcqueue.manages1.controller.PerformWork": {
+						"controllerName": "customer.zmpe.wcque.mgs1.ext.controller.PerformWorkCustom"
 					}
 				}
 			}
