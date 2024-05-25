@@ -14,12 +14,12 @@ builder:
       afterTask: generateCachebusterInfo
       configuration:
         target:
-          destination: sap-s4x-100-http
-          url: http://sap-s4x:443
+          destination: sap-s4d-100-http
+          url: http://sap-s4d:443
         app:
           name: /SRAIL/WCQUEEXT
           description: Manage Work Center Queue CC
           package: /SRAIL/PEO_WQMNG
-          transport: S4XK901418
+          transport: S4DK935506
         exclude:
           - /test/

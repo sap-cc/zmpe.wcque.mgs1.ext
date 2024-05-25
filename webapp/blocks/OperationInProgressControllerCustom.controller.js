@@ -196,7 +196,7 @@ sap.ui.define(
             (B !== "" && B !== this.oOpsDetailModelData.SearchText)
           ) {
             this.oOpsDetailModelData.SearchText = B;
-            this.determineTotalNumberOfEntries();
+            //this.determineTotalNumberOfEntries(); raise dump in backend "OperationHasProductionHold"
             o = m.getData();
             this.oOpsDetailModelData.WorkCenter = o.WorkCenter;
             this.oOpsDetailModelData.ProductionPlant = o.ProductionPlant;

@@ -10,22 +10,22 @@ server:
         ignoreCertError: false
         backend:
           - path: /sap
-            url: http://sap-s4x:443
+            url: http://sap-s4d:443
             client: "100"
-            destination: sap-s4x-100-http
+            destination: sap-s4d-100-http
           - path: /resources/sap/i2d/mpe/lib/workuicomps1
-            destination: sap-s4x-100-http
-            url: http://sap-s4x:443
+            destination: sap-s4d-100-http
+            url: http://sap-s4d:443
             client: "100"
             pathPrefix: /sap/bc/ui5_ui5/sap/wkuicomp_libs1
           - path: /resources/sap/i2d/mpe/lib/commons1
-            destination: sap-s4x-100-http
-            url: http://sap-s4x:443
+            destination: sap-s4d-100-http
+            url: http://sap-s4d:443
             client: "100"
             pathPrefix: /sap/bc/ui5_ui5/sap/common_libs1
           - path: /resources/sap/i2d/mpe/lib/popovers1
-            destination: sap-s4x-100-http
-            url: http://sap-s4x:443
+            destination: sap-s4d-100-http
+            url: http://sap-s4d:443
             client: "100"
             pathPrefix: /sap/bc/ui5_ui5/sap/popovers_libs1
         ui5:
